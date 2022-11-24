@@ -1,14 +1,8 @@
 # RuleFinder - Palo Alto Utility
 This is a utility built to work with the Palo Alto firewall management system (Panorama).
-It provides the ability to search for any IP/FQDN and find all associated security rules.
-![Demo gif](./demo/demo.gif)
+It provides the ability to search for any IP/FQDN and find all associated security rules.  
 
-# Technologies
-Built using:
-Python
-PostgreSQL
-Flask/Jinja
-HTML/CSS
+![Demo](https://user-images.githubusercontent.com/88141669/203670698-aa2621a7-1be6-4479-9688-bb131aa7e06e.gif)  
 
 # Inspiration
 For anyone unfamiliar with Palo Alto firewalls or managing security rules in general,
@@ -19,37 +13,53 @@ For an admin this is not necessarily needed but I've been asked many times to pr
 a list of rules for a list of servers and this can be time consuming. With this app,
 not only can they search for themselves, it also is much faster than doing it manually. 
 
-# Usage
-This isn't really a production ready app since it doesn't have a login functionality 
-and there are still some features missing (such as searching for associated address groups)
-but if you would like to build on it, here's what you'll need:
-`
-### Apps:
-PostgreSQL Database 
-Python
+# Technologies  
+Python  
+PostgreSQL  
+Flask/Jinja  
+HTML/CSS  
 
-## Modules:
-requests
-xml.etree.ElementTree
-ipaddress
-socket
-re
+## Modules:  
+```
+External:  
+Flask  
+requests  
+ipaddress  
+psycopg2  
 
-## Files:
+Built-In:  
+configparser  
+functools  
+xml.etree.ElementTree  
+socket  
+re  
+os  
+```
+
+# Usage  
+WARNING: This is not a production ready app and should not be used as such.
+
+Clone the repo into a new folder and have a terminal in the directory.
+Update the files as mentioned below.
 
 ### constants.py:
+```
 FLASK_KEY = 'YOUR FLASK KEY'
 
 FW = 'YOUR PANORAMA IP/FQDN'
 PA_KEY = 'YOUR API KEY FOR PANORAMA'
 
 DGROUPS = ['ALL DEVICE GROUPS YOU WANT TO QUERY']
-
+```
 ### database.ini:
-
+```
 [postgresql]
-host=localhost (OR WHEREVER THE DB IS HOSTED)
+host=localhost (Database host location)
 database=YOUR DB NAME
 user=YOUR DB USER
 password=YOUR DB PASSWORD
-`
+```
+
+### Getting the app up and running  
+`rulefinder.dbupdate` - Update the SQL Database   
+`rulefinder` - Start the Flask service
