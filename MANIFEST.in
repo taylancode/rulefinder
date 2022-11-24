@@ -1,0 +1,2 @@
+recursive-include rulefinder/templates *
+include rulefinder/database.ini

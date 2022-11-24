@@ -1,0 +1,63 @@
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+#jbehave/idea
+.idea
+*.swp
+*~
+*.log
+target/
+build/
+gen-*/
+bin/
+*.ipr
+*.iml
+*.iws
+**/ConfigRoot
+#Visual Studio files
+*.[Oo]bj
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.[Cc]ache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.sdf
+ipch/
+obj/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+[Tt]arget/
+Ankh.NoLoad
+#Tooling
+_ReSharper*/
+*.user
+[Tt]est[Rr]esult*
+#Project files
+[Oo]utput/
+#Subversion files
+.svn
+# Office Temp Files
+~$*
+# Vi editor files
+.*.sw[op]
+*_output
+target
+env
+.env
+__pycache__
+*.egg-info
+.vscode

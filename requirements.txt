@@ -1,0 +1,4 @@
+requests==2.27.1
+psycopg2==2.9.5
+flask==2.2.2
+ipaddress==1.0.23
